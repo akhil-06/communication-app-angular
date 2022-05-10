@@ -1,0 +1,23 @@
+.heading {
+	text-align: center;
+}
+.form_Container {
+	display: flex;
+	justify-content: center;
+}
+.submit {
+	text-align: center;
+}
+.login-btn {
+	background-color: #66ffff;
+	height: 2rem;
+	margin-top: 1.5rem;
+	width: 8rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	cursor: pointer;
+}
+#row {
+	text-align: right;
+	padding: 12px;
+}

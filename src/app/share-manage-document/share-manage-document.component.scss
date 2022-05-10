@@ -1,0 +1,102 @@
+/* header part */
+/*another container */
+/* share */
+.container {
+	margin: 0%;
+}
+.row {
+	width: 80.5rem;
+	height: 3rem;
+}
+.col {
+	border: 2px solid black;
+	background-color: #bfbfbf;
+	text-align: center;
+	padding-top: 0.5rem;
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	&::after {
+		color: white;
+	}
+}
+.upload {
+	margin-top: 2rem;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+}
+.cont {
+	height: 14rem;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+}
+.table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	td {
+		text-align: center;
+	}
+}
+th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.changeColour2 {
+	tr {
+		td {
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		}
+		&:nth-child(even) {
+			background-color: #f0f0f0;
+		}
+	}
+}
+.userId {
+	text-align: center;
+}
+.changeColour {
+	background-color: #bfbfbf;
+	color: black;
+}
+.share {
+	margin-top: 2rem;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+}
+.cont2 {
+	height: 4rem;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+}
+.file {
+	margin-left: 5rem;
+	margin-top: 1rem;
+	select {
+		width: 15rem;
+		padding-left: 5rem;
+		border: 1px solid black;
+		background-color: transparent;
+		height: 2rem;
+		margin-left: 2rem;
+		option {
+			border: 1px solid black;
+		}
+	}
+	button {
+		width: 8rem;
+		border-radius: 0.5rem;
+		background-color: #b3b3b3;
+	}
+}
+span {
+	margin-left: 2rem;
+}

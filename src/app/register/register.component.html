@@ -1,0 +1,91 @@
+<div class="heading">
+    <h1>Register</h1>
+</div>
+
+
+<form [formGroup]="registerForm" action="/src/app/register-successful/register-successful.component.html" name="RegForm">
+    <div class="form_Container">
+
+        <table>
+            <tr>
+                <td id="row">Full Name</td>
+                <td><input type="name" name="name" placeholder="Anne Hunter" value="" formControlName="name"
+                        [ngClass]="{
+                      'is-invalid':
+                        (registerForm.get('name').touched ||
+                          registerForm.get('name').dirty) &&
+                        !registerForm.get('name').valid
+                    }" /></td>
+            </tr>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('name').errors?.['required']">
+                    Please enter your name.
+                </span>
+            </div>
+            <tr>
+                <td id="row">Email</td>
+                <td><input type="email" name="EMail" placeholder="anne.humter@mail.com" value=""
+                        formControlName="email" [ngClass]="{
+                      'is-invalid':
+                        (registerForm.get('email').touched ||
+                          registerForm.get('email').dirty) &&
+                        !registerForm.get('email').valid
+                    }" /></td>
+            </tr>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('email').errors?.['required']">
+                    Please enter your email.
+                </span>
+            </div>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('email').errors?.['email']">
+                    Please enter correct email syntax.
+                </span>
+            </div>
+            <tr>
+                <td id="row">Password</td>
+                <td><input type="password" name="Password" placeholder="******" formControlName="password" [ngClass]="{
+                    'is-invalid':
+                      (registerForm.get('password').touched ||
+                        registerForm.get('password').dirty) &&
+                      !registerForm.get('password').valid
+                  }" /> </td>
+            </tr>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('password').errors?.['required']">
+                    Please enter your password.
+                </span>
+            </div>
+            <tr>
+                <td id="row">Confirm Password</td>
+                <td> <input type="password" name="Password" placeholder="******" formControlName="confirmPassword"
+                        [ngClass]="{
+                    'is-invalid':
+                      (registerForm.get('confirmPassword').touched ||
+                        registerForm.get('confirmPassword').dirty) &&
+                      !registerForm.get('confirmPassword').valid
+                  }" /></td>
+            </tr>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('confirmPassword').errors?.['required']">
+                    Please enter your confirmPassword.
+                </span>
+            </div>
+            <div class="invalid-feedback">
+                <span *ngIf="registerForm.get('confirmPassword').errors?.['MustMatch']">
+                    confirmPassword didn't match.
+                </span>
+            </div>
+            
+        </table>
+    </div>
+    <div class="submit">
+        <button class="login-btn" type="submit" [disabled]="!registerForm.valid" (click)="save()">
+          Register
+        </button>
+    </div>
+    <div>Dirty: {{ registerForm.dirty }}</div>
+    <div>Touched: {{ registerForm.touched }}</div>
+    <div>valid: {{ registerForm.valid }}</div>
+    <div>Value: {{ registerForm.value | json }}</div>
+</form>

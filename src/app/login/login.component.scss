@@ -1,0 +1,35 @@
+.heading {
+	text-align: center;
+}
+.form_Container {
+	display: flex;
+	justify-content: center;
+}
+
+.submit{
+	width: 25rem;
+	height: 2rem;
+	margin-left: 38rem;
+	margin-top: 1rem;
+}
+
+.btn-primary{
+	background-color: rgb(102, 255, 255);
+	color:black;
+	width: 8rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+}
+
+
+#row {
+	text-align: right;
+	padding: 12px;
+}
+.invalid-feedback{
+	margin-right: -12rem;
+}
+.invalid-feedback span{
+	margin-left: 5rem;
+	font-weight: lighter;
+}

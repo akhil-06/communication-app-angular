@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <a routerLink="/group-chat">Group Chat</a>
+      </div>
+      <div class="col">
+        <a routerLink="/users-management">Manage Users</a>
+      </div>
+      <div class="col">
+        <a routerLink="/manage-documents">Manage Documents</a>
+      </div>
+      <div class="col">
+        <a routerLink="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+  <!-- login successful  -->
+  <div class="success">
+    <h2>Login Successful</h2>
+    <p><strong>Welcome!</strong></p>
+    <p><strong>Name:</strong>    {{LOGGED_IN_USER_NAME}}</p>
+    <p><strong>Email:</strong>   {{LOGGED_IN_USER_ID}}</p>
+  </div>

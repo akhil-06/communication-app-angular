@@ -1,0 +1,54 @@
+<div class="heading">
+  <h1>Login</h1>
+</div>
+<form [formGroup]="loginForm" action="/src/app/login-successful/login-successful.component.html" name="RegForm">
+  <div class="form_Container">
+    <table>
+      <tr>
+        <td id="row">Email</td>
+        <td>
+          <input type="email" name="EMail" placeholder="anne.humter@mail.com" value=""
+            formControlName="email" [ngClass]="{
+              'is-invalid':
+                (loginForm.get('email').touched ||
+                  loginForm.get('email').dirty) &&
+                !loginForm.get('email').valid
+            }" />
+        </td>
+      </tr>
+      <div class="invalid-feedback">
+        <span *ngIf="loginForm.get('email').errors?.['required']">
+          Please enter your email.
+        </span>
+      </div>
+      
+      <tr>
+        <td id="row">Password</td>
+        <td>
+          <input type="password" name="Password" placeholder="******" formControlName="password" [ngClass]="{
+              'is-invalid':
+                (loginForm.get('password').touched ||
+                  loginForm.get('password').dirty) &&
+                !loginForm.get('password').valid
+            }" />
+        </td>
+      </tr>
+      <div class="invalid-feedback">
+        <span *ngIf="loginForm.get('password').errors?.['required']">
+          Please enter your password.
+        </span>
+      </div>
+    </table>
+  </div>
+
+  <div class="submit">
+    <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid" (click)="save()">
+      Login
+    </button>
+  </div>
+
+  <div>Dirty: {{ loginForm.dirty }}</div>
+  <div>Touched: {{ loginForm.touched }}</div>
+  <div>valid: {{ loginForm.valid }}</div>
+  <div>Value: {{ loginForm.value | json }}</div>
+</form>

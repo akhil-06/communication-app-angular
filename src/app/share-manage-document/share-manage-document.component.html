@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="/GroupChatPage/chat.html">Group Chat</a>
+        </div>
+        <div class="col">
+            <a href="/UserListPage/users.html">Manage Users</a>
+        </div>
+        <div class="col">
+            <a href="/DocumentsList/document.html">Manage Documents</a>
+        </div>
+        <div class="col">
+            <a href="/LogoutPage/logout.html">Logout</a>
+        </div>
+    </div>
+</div>
+<p class="upload"><strong>Upload Sharing</strong> : Sample.txt</p>
+<!-- another container -->
+<div class="cont">
+    <table class="table">
+        <thead>
+            <tr class="changeColour">
+                <th scope="col">Shared User</th>
+                <th class="userId">Action</th>
+            </tr>
+        </thead>
+        <tbody class="changeColour2">
+            <tr>
+                <th scope="row">Anne Hunter</th>
+                <td>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Text User</th>
+                <td>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p class="share"><strong>Add Sharing</strong></p>
+<!-- share part -->
+<div class="cont2">
+    <div class="file">
+        <label for=""><strong>Choose User :</strong> </label>
+        <select>
+            <option>J Bose</option>
+            <option value="hr">HR</option>
+            <option value="harsh">Harsh Zaveri</option>
+        </select>
+        <span><button>Add Share</button></span>
+    </div>
+</div>
+<!-- Modal for remove -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Confirm From Web Page
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i> Are You
+                Sure?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    ok
+                </button>
+                <button type="button" class="btn btn-primary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

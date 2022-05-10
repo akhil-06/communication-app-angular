@@ -1,0 +1,46 @@
+<!-- header part -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="/GroupChatPage/chat.html">Group Chat</a>
+      </div>
+      <div class="col">
+        <a href="/UserListPage/users.html">Manage Users</a>
+      </div>
+      <div class="col">
+        <a href="/DocumentsList/document.html">Manage Documents</a>
+      </div>
+      <div class="col">
+        <a href="/LogoutPage/logout.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <h4>Edit User Information</h4>
+    <!-- Start: Form-->
+    <form novalidate [formGroup]="editUserForm" (submit)="editUserSave()" required>
+        <table class="form-table">
+            <tr class="fullname">
+                <td class="text-right"><label for="text">Full Name</label></td>
+                <td><input type="text" formControlName="fullName" id="fullName" class="form-input-field"
+                        placeholder="Enter Name" vaue="userToEdit.fullName">
+                </td>
+            </tr>
+            <tr class="email">
+                <td class="text-right"><label for="email">Email</label></td>
+                <td><input type="email" formControlName="email" id="email" class="form-input-field"
+                        placeholder="Enter Email">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                  <button type="submit" class="btn"
+                      [disabled]="!editUserForm.valid">Save</button>
+              </td>
+          </tr>
+      </table>
+  </form>
+  <!-- End: Form-->
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a routerLink="/group-chat">Group Chat</a>
+    </div>
+    <div class="col">
+      <a routerLink="/users-management">Manage Users</a>
+    </div>
+    <div class="col">
+      <a routerLink="/manage-documents">Manage Documents</a>
+    </div>
+    <div class="col">
+      <a routerLink="/logout">Logout</a>
+    </div>
+  </div>
+</div>
+<div class="head">
+  <p><strong>Group Chat</strong><i class="fa fa-times" aria-hidden="true"></i></p>
+</div>
+<div class="cont2">
+  <table class="tabData">
+      <tbody id="tabledata">
+          <tr *ngFor="let chat of chats">{{dateTime | date:'[d/MMM/y  HH:mm:ss]'}} {{LOGGED_IN_USER_ID}}  {{chat.inputBox}}</tr>
+      </tbody>
+
+  </table>
+</div>
+<!-- container3 -->
+<div class="cont3">
+  <table class="message">
+      <tr>
+          <th>Anne Hunter</th>
+          <th class="message1"><input type="text" #box id="chatMessage"  value="I am good"></th>
+          <th><button (click)="send()">Send</button></th>
+          <th><button (click)="getValue(box.value)">Refersh</button></th>
+      </tr>
+  </table>
+</div>

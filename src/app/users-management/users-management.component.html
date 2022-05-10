@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a routerLink="/group-chat">Group Chat</a>
+    </div>
+    <div class="col">
+      <a routerLink="/users-management">Manage Users</a>
+    </div>
+    <div class="col">
+      <a routerLink="/manage-documents">Manage Documents</a>
+    </div>
+    <div class="col">
+      <a routerLink="/logout">Logout</a>
+    </div>
+  </div>
+</div>
+<h2 class="users">Users</h2>
+<div class="cont">
+  <table class="table">
+    <thead>
+      <tr class="changeColour">
+        <th scope="col">Name</th>
+        <th scope="col" class="userId">User Email ID</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="changeColour2" id="tabledata3">
+      <tr *ngFor="let item of users">
+        <th><a class="no-underline" [routerLink]="['/edit',item.id]"
+            routerLinkActive="router-link-active">{{item.name}}</a></th>
+        <th>{{item.email}}</th>
+        <th> <a [routerLink]="['/edit',item.id]"><button type="button" id="{{item.id}}">Edit</button></a> | <button
+            type="button" (click)="delete(item.id)" data-bs-toggle="modal" data-bs-target="#exampleModalLabel"
+            [disabled]="item.id==LOGGED_IN_USER_ID">Delete</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- modal for delete -->
+<div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Confirm User Deletion
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/image/questionMark.png" alt="loading" />
+          <strong>Are You Sure?</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light ok-btn" data-bs-dismiss="modal" (click)=" userDeleteOk()">
+            ok
+          </button>
+          <button type="button" class="btn btn-light cancel-btn">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
